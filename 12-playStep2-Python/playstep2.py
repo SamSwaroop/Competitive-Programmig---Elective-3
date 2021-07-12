@@ -34,5 +34,51 @@
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
 def playstep2(hand, dice):
-	# your code goes here
-	pass
+	s=hand
+	z=[]
+	while(s!=0):
+		f=s%10
+		z.append(f)
+		s=s//10
+	z.reverse()
+	y=set(z)
+	l=[]
+	o=[]
+	if(len(z)!=len(y)):
+		g=[]
+		e=[]
+		count=0
+		for i in z:
+			if i not in g:
+				g.append(i)
+			else:
+				e.append(i)
+		n=[]
+		for i in e:
+			for j in z:
+				if i==j:
+					n.append(str(i))
+		s=dice%10
+		dice=dice//10
+		n.append(str(s))
+		n.sort(reverse=True)
+		c="".join(n)
+		b=[]
+		b.append(int(c))
+		b.append(dice)
+		t=tuple(b)
+		return t
+	z.sort(reverse=True)
+	w=[]
+	w.append(z[0])
+	w.append(dice%10)
+	dice=dice//10
+	w.append(dice%10)
+	dice=dice//10
+	w.sort(reverse=True)
+	h=""+str(w[0])+str(w[1])+str(w[2])
+	v=[]
+	v.append(int(h))
+	v.append(dice)
+	p=tuple(v)
+	return p
