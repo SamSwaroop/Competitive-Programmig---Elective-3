@@ -7,4 +7,25 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+	# d=str(hand)
+	# e=d.split()
+	# f=set()
+	# for i in e:
+	# 	f.add(int(i))
+	# return f
+	s=hand
+	z=[]
+
+	while(s!=0):
+		f=s%10
+		z.append(f)
+		s=s//10
+
+	z.reverse()
+
+	d=tuple(z)
+	return d
+
+
+
+
