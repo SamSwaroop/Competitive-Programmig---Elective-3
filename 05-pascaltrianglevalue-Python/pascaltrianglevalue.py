@@ -5,8 +5,13 @@
 # each row starts at column 0. If either row or col 
 # are not legal values, return None, instead of crashing. 
 
-
+def fact(n):
+    f=1
+    for i in range(1,n+1):
+        f=f*i
+    return f
 
 
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	ncr=fact(row)/(fact(col)*fact(row-col))
+	return(int(ncr))
