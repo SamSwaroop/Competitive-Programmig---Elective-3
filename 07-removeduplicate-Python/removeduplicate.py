@@ -4,5 +4,11 @@
 # The second or further occurrence of duplicate should be removed.
 
 def removeduplicate(text):
-	# Your code goes here
-	pass
+	f=set(text)
+	g=list(f)
+	w=""
+	for i in range(len(text)):
+		if(text[i] in g):
+			w+=text[i]
+			g.pop(g.index(text[i]))
+	return(w)
