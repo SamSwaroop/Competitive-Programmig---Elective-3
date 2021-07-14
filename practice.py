@@ -1,0 +1,9 @@
+r=29
+d=r%8
+e=int(r/8)
+print(d)
+print(int(e))
+if(d<=4):
+    print(int(e*8))
+else:
+    print(int(8*(e+1)))
