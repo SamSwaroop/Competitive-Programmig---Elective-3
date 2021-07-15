@@ -5,5 +5,11 @@
 # if the two circles intersect and False otherwise.
 
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
-	# your code goes here
-	return False 
+	a=(y2-y1)**2
+	b=(x2-x1)**2
+	e=a+b
+	d=int((e)**0.5)
+	if(d==r1+r2) or (d==r1-r2) or ((r1-r2)<d<(r1+r2)):
+		return True
+	else:
+		return False
