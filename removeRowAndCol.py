@@ -22,7 +22,18 @@
 #   [ 0, 1, 3] ]
 
 def removeRowAndCol(L, row, col):
-    # Your code goes here...
-    pass
+    L.pop(row-1)
+    for i in range(len(L)):
+        L[i].pop(col)
+    return L
 
 # Write your own test cases.
+
+
+
+
+f=[ [ 2, 3, 4, 5],
+  [ 8, 7, 6, 5],
+  [ 0, 1, 2, 3] ]
+
+print(removeRowAndCol(f, 2, 2))
