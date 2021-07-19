@@ -9,5 +9,5 @@
 
 def numberofpoolballs(rows):
 	n=rows
-	d=(n*(n+1))//2
+	d=(n*(n+1))/2
 	return d
