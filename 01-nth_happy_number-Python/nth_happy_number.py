@@ -18,11 +18,36 @@
 
 
 
+def sumDigitSquare(n) :
+    sq = 0
+    while (n) :
+        digit = n % 10
+        sq = sq + digit * digit
+        n = n // 10
+     
+    return sq
 
+
+
+
+def ishappynumber(n):
+	if(n<=3 and n!=1):
+		return False
+	else:
+		while (1) :
+			if (n == 1) :
+				return True
+			n = sumDigitSquare(n)
+			if (n == 4) :
+				return False
+		return False
 
 
 def nth_happy_number(n):
-	p,q=0
+	if(n==1):
+		return 1
+	p=2
+	q=2
 	while(p<=n):
 		q=q+1
 		if(ishappynumber(q)):
