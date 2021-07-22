@@ -17,6 +17,29 @@
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
 
+def sumDigitSquare(n) :
+    sq = 0
+    while (n) :
+        digit = n % 10
+        sq = sq + digit * digit
+        n = n // 10
+     
+    return sq
+
+
+
+
 def ishappynumber(n):
-	# your code goes here
-	pass
+	if(n<=3 and n!=1):
+		return False
+	else:
+		while (1) :
+			if (n == 1) :
+				return True
+			n = sumDigitSquare(n)
+			if (n == 4) :
+				return False
+		return False
+
+
+	
