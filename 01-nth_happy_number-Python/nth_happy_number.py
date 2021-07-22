@@ -15,5 +15,16 @@
 # assert(nth_happy_number(8) == 31)
 
 
+
+
+
+
+
+
 def nth_happy_number(n):
-	return 0
+	p,q=0
+	while(p<=n):
+		q=q+1
+		if(ishappynumber(q)):
+			p=p+1
+	return q
