@@ -14,14 +14,18 @@ def automorphic(n):
 
 
 def nthautomorphicnumbers(n):
-	if(n==1):
-		return 0
-	if(n==2):
-		return 1
+	# if(n==1):
+	# 	return 0
+	# if(n==2):
+	# 	return 1
 	p=0
 	q=0
-	while(p<=n):
-		q=q+1
+	res=0
+	while(p<n):
+		# q=q+1
 		if(automorphic(q)):
+			res=q
+
 			p=p+1
-	return q
+		q=q+1
+	return res
