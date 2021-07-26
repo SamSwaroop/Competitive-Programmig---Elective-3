@@ -24,8 +24,8 @@ def test_insert(position,result):
     assert ll.get_position(position).value == result
 
 
-@pytest.mark.parametrize("val,result",[(1,2),(2,4),(3,3)])
+@pytest.mark.parametrize("val,result",[(1,2),(2,3)])
 def test_delete(val,result):
-    ll.delete(1)
+    ll.delete(val)
     assert ll.get_position(val).value == result
 
