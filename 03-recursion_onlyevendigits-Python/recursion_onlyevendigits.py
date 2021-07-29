@@ -8,5 +8,17 @@
 # Also the function returns the empty list if the original list is empty. 
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
-def fun_recursion_onlyevendigits(l): 
-		return []
+# def fun_recursion_onlyevendigits(l):
+
+
+d=[43, 23265, 17, 58344]
+for i in d:
+	flag=0
+	x=i
+	while(x!=0):
+		n=i%10
+		if(n%2!=0):
+			flag=flag+1
+		x=x//10
+	
+
