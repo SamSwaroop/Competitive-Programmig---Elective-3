@@ -11,7 +11,22 @@
 # Hint: The time complexity can be achieved in Linear.
 
 def areAnagrams(s1, s2):
-    # Your code goes here...
-    pass
+    
+    e=s1.lower()
+    f=s2.lower()
+    if(len(e)==len(f)):
+        for i in range(len(e)):
+            if(e[i]  in f) and (f[i] in e):
+                continue
+            else:
+                return False
+        return True
+    else:
+        return False
+    
+
 
 # write your test cases here...
+
+print(areAnagrams("Abac", "BBA"))
+print(areAnagrams("bac", "BAc"))
