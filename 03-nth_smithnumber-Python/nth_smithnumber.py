@@ -8,5 +8,21 @@
 # so fun_nthsmithnumber(1) should return 22
 
 
+def smith(x):
+    d=[int(i) for i in str(x)]
+    e=sum(d)
+    for j in 
+
+    
+
+
+
+
+
 def fun_nth_smithnumber(n):
-    return 1
+    p,q=0,0
+    while(p<=n):
+        q=q+1
+        if(smith(q)):
+            p=p+1
+    return q
