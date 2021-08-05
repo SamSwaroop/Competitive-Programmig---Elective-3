@@ -19,6 +19,16 @@ the function should return as follows
 }
 '''
 
+
+
+    
+
+
 def movie_awards(oscarResults):
-    # Your code goes here...
-    pass
+    g=dict()
+    count=0
+    for i in oscarResults:
+        g[i[1]]=count
+    for i in oscarResults:
+        g[i[1]]=g[i[1]]+1
+    return g
