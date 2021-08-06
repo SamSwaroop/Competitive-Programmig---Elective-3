@@ -14,28 +14,49 @@
 # If nobody wins (there is no data), return None (not the 
 # string "None"). So, for example:
 
-def topScorer(data):
-    # Your code goes here...
-    return ""
+# def topScorer(data):
+#     # Your code goes here...
+#     return ""
 
-data = '''\
-Fred,10,20,30,40
-Wilma,10,20,30
-'''
-assert(topScorer(data) == 'Fred')
+# data = '''\
+# Fred,10,20,30,40
+# Wilma,10,20,30
+# '''
+# assert(topScorer(data) == 'Fred')
 
-data = '''\
-Fred,10,20,30
-Wilma,10,20,30,40
-'''
-assert(topScorer(data) == 'Wilma')
+# data = '''\
+# Fred,10,20,30
+# Wilma,10,20,30,40
+# '''
+# assert(topScorer(data) == 'Wilma')
 
 data = '''\
 Fred,11,20,30
 Wilma,10,20,30,1
 '''
-assert(topScorer(data) == 'Fred,Wilma')
+# assert(topScorer(data) == 'Fred,Wilma')
 
-assert(topScorer('') == None)
-print("All test cases passed...!")
+# assert(topScorer('') == None)
+# print("All test cases passed...!")
 # Hint: you may want to use both splitlines() and split(',') here!
+
+print(data.splitlines())
+f=data.splitlines()
+print(f)
+g=[]
+for i in f:
+    g.append(i.split(','))
+print(g)
+y=dict()
+
+for j in range(len(g)):
+    sum=0
+    for k in range(len(g[j])):
+        if(g[j][k].isdigit()):
+            sum=sum+int(g[j][k])
+        y[g[j][0]]=sum
+print(y)
+maximum=max(y,key=y.get)
+print(maximum)
+
+
