@@ -7,6 +7,14 @@
 # 	limitedPowerSet(5, 7) => 
 # [ {}, {1}, {2}, {3}, {4}, {5}, {1, 2} ]
 
+import itertools
 def limitedPowerSet(n, k):
-    # Your code goes here...
-    pass
+    count=0
+    f=[]
+    l=set()
+    while(count<=k):
+        f.append(l.add(count))
+        count=count+1
+    return f
+
+print(limitedPowerSet(5, 7))
